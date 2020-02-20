@@ -5,7 +5,7 @@
    
 
  <h3>Images:</h3>
-   <%=f.fields_for :images_attributes do |i|%>
+   <%=f.fields_for :images do |i|%>
    <br>
          <div>
             <%=i.text_field :imagename, class:'form-control'%>

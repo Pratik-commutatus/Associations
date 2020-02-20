@@ -8,7 +8,8 @@
             </div>
             <td>
 <%- unless a.object.new_record? %>
-      <%= link_to "Add Image", author_book_path(@author, a.object)%>
+      <%= link_to "Book-Images", author_book_path(@author, a.object)%>
+      <br>
 <% end %>
 </td>    
             
