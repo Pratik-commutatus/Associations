@@ -1,11 +1,11 @@
-<h1><%= @author.name%></h1>
+<h1><%= @book.bookname%></h1>
 
-<%=form_for @author do |f|%>
+<%=form_for [@author, @book] do |f|%>
 
    
 
  <h3>Images:</h3>
-   <%=f.fields_for :images do |i|%>
+   <%=f.fields_for :images_attributes do |i|%>
    <br>
          <div>
             <%=i.text_field :imagename, class:'form-control'%>

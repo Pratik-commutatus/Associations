@@ -7,7 +7,9 @@
             <%=a.text_field :bookname, class:'form-control'%>
             </div>
             <td>
-<%=link_to "Add Image", author_book_path(a)%>
+<%- unless a.object.new_record? %>
+      <%= link_to "Add Image", author_book_path(@author, a.object)%>
+<% end %>
 </td>    
             
     <%end%>
