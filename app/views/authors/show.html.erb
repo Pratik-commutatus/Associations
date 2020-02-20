@@ -1,0 +1,27 @@
+<%=form_for @author do |f|%>
+
+   <h3>Books:</h3>
+    <%=f.fields_for :books do |a|%>
+    <br>
+            <div>
+            <%=a.text_field :bookname, class:'form-control'%>
+            </div>
+            <td>
+<%=link_to "Add Image", author_book_path(a)%>
+</td>    
+            
+    <%end%>
+
+ <h3>Images:</h3>
+   <%=f.fields_for :images do |i|%>
+   <br>
+         <div>
+            <%=i.text_field :imagename, class:'form-control'%>
+            </div>
+            <td>
+      <%end%>
+
+            <div>
+            <%=f.submit "Create", id: "btn", class:"btn btn-outline-primary"%>
+            </div>
+            <%end%>

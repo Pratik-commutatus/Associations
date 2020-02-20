@@ -1,0 +1,21 @@
+<%=form_for @detail do |f| %>
+
+<div>
+<h3><%=f.label :name%></h3>
+<%=f.text_field :name, id: "name", class:'form-control'%>
+</div>
+<br>
+<%=f.fields_for :account do |a|%>
+<div>
+<h3><%=a.label :account%></h3>
+<%=a.text_field :number, id: "desc", class:'form-control'%>
+</div>
+<%end%>
+<br>
+
+<div>
+<%=f.submit "Save", id: "btn", class:"btn btn-outline-info"%>
+</div>
+<div><h1><%= link_to "Back", employees_path,  class:"btn btn-outline-danger"%></h1></div>
+
+<% end %>

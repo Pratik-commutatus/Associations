@@ -1,0 +1,27 @@
+
+<%=form_for @appointment do |f| %>
+
+<div>
+<h3><%=f.label :date%></h3>
+<%=f.text_field :date, id: "date", class:'form-control'%>
+</div>
+<br>
+<%= f.fields_for :patient do |p|%>
+<div>
+<h3><%=p.label :patient%></h3>
+<%=p.text_field :patientname, id: "patient", class:'form-control'%>
+</div>
+<%end%>
+<br>
+<div>
+<h3><%=f.label:doctor%></h3>
+  <%= f.collection_select :doctor_id, Doctor.order(:name),:id,:name %>
+
+</div>
+<br>
+
+<div>
+<%=f.submit "Save", id: "btn", class:"btn btn-outline-primary"%>
+</div>
+
+<% end %>

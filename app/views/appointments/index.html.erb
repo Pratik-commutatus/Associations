@@ -1,0 +1,27 @@
+<br>
+<h1>Appointments</h1>
+<br><br>
+<table class="table table-bordered">
+<thead>
+<th>Date</th>
+<th>Patient</th>
+<th>Doctor</th>
+
+</thead>
+<% @appointments.each do |a|%>
+<tr>
+<td><%= a.date %></td>
+
+<td><%= a.patient.patientname%></td>
+
+<td><%= a.doctor.name%></td>
+<td>
+<%=link_to "Delete", a, method: :delete, data:{confirm:"Are you sure ?"}%>
+</td>
+</tr>
+<% end%>
+</table>
+
+<div><h3><%= link_to "Make New Appointment", new_appointment_path, class:"btn btn-outline-primary"%></h3></div>
+<br>
+<div><h4><%= link_to "Show Doctors", doctors_path, class:"btn btn-outline-secondary"%></h4></div>

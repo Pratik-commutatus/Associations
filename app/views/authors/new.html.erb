@@ -1,0 +1,21 @@
+<%=form_for @author do |f| %>
+
+
+<div>
+<h3><%=f.label :name%></h3>
+<%=f.text_field :name, id: "name", class:'form-control'%>
+</div>
+<br>
+<%=f.fields_for :images do |i|%>
+<div>
+<h3><%=i.label :image_name%></h3>
+<%=i.text_field :imagename, class:'form-control'%>
+</div>
+<br>
+<%end%>
+
+<div>
+<%=f.submit "Create", id: "btn", class:"btn btn-outline-primary"%>
+</div>
+
+<% end %>

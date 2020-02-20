@@ -1,0 +1,21 @@
+<br>
+<h1>Doctor</h1>
+<br><br>
+<table class="table table-bordered">
+<thead>
+<th>Name</th>
+</thead>
+<% @doctors.each do |doctor|%>
+<tr>
+<td><%= doctor.name %></td>
+<td>
+<%=link_to "Edit", edit_doctor_path(doctor)%>
+</td>
+<td>
+<%=link_to "Delete", doctor, method: :delete, data:{confirm:"Are you sure ?"}%>
+</td>
+</tr>
+<% end%>
+</table>
+<div><h1><%= link_to "Add Doctor", new_doctor_path,  class:"btn btn-outline-primary"%></h1></div>
+<div><h1><%= link_to "Back", appointments_path,  class:"btn btn-outline-danger"%></h1></div>

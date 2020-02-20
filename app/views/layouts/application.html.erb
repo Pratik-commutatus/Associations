@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Associations</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+<%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">ASSOCIATIONS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      <%=link_to 'Has_many & belongs_to', employees_path, class:"nav-link"%>
+      </li>
+       <li class="nav-item">
+        <%=link_to 'Has_many through', appointments_path, class:"nav-link"%>
+      </li> 
+      <li class="nav-item">
+        <%=link_to 'Has_many & Polymorphism', authors_path, class:"nav-link"%>
+      </li>
+     
+  
+  </div>
+</nav>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+<%=form_for @doctor do |f| %>
+
+<div>
+<h3><%=f.label :name%></h3>
+<%=f.text_field :name, id: "name", class:'form-control'%>
+</div>
+<br>
+
+<div>
+<%=f.submit "Create", id: "btn", class:'btn btn-primary'%>
+</div>
+
+<% end %>

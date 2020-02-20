@@ -1,0 +1,16 @@
+<br>
+<h1>Account Details</h1>
+<br><br>
+<table class="table table-bordered">
+<thead>
+<th>Name</th>
+<th>Account</th>
+</thead>
+<% @details.each do |d|%>
+<tr>
+<td><%= d.name %></td>
+<td><%= d.account.number%></td>
+</tr>
+<% end%>
+</table>
+<div><h1><%= link_to "Create", new_employee_path, class:"btn btn-outline-primary"%></h1></div>
