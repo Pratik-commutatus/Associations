@@ -9,7 +9,7 @@
 <% @details.each do |d|%>
 <tr>
 <td><%= d.name %></td>
-<td><%= d.account.number%></td>
+<td><%= d.account&.number%></td>
 </tr>
 <% end%>
 </table>
