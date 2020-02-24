@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :users
+  resources :members
   resources :images
   resources :appointments
   resources :doctors

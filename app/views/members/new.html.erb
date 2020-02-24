@@ -1,0 +1,43 @@
+<h1>Add Details:</h1>
+<br>
+<%=form_for @member do |m|%>
+
+<h4>Select Country:</h4>
+
+<%= check_box_tag(:country, "India")%>
+<%= label_tag(:country, "India")%>
+<br>
+<%= check_box_tag(:country, "Pakistan")%>
+<%= label_tag(:country, "Pakistan")%>
+<br>
+<%= check_box_tag(:country, "Nepal")%>
+<%= label_tag(:country, "Nepal")%>
+<br>
+
+<h4>Eligibility:</h4>
+<%= radio_button_tag(:age, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %>
+<br>
+<%= radio_button_tag(:age, "adult") %>
+<%= label_tag(:age_adult, "I am over 21") %>
+<br>
+
+<h4>Address:</h4>
+<%= text_area_tag(:address,'', size: "24x6") %>
+<br>
+
+<h4>Password:</h4>
+<%= password_field_tag(:password) %>
+<br>
+
+<h4>Phone Number:</h4>
+<%= telephone_field(:, :telephone) %>
+<br>
+
+
+
+<div>
+<%=m.submit "Save", id: "btn", class:"btn btn-outline-info"%>
+</div>
+
+<%end%>

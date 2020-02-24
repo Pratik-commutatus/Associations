@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_19_160815) do
+ActiveRecord::Schema.define(version: 2020_02_23_095249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,10 +69,42 @@ ActiveRecord::Schema.define(version: 2020_02_19_160815) do
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
   end
 
+  create_table "members", force: :cascade do |t|
+    t.string "country"
+    t.string "age"
+    t.string "address"
+    t.string "password"
+    t.integer "telephone"
+    t.date "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "patients", force: :cascade do |t|
     t.string "patientname"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "country"
+    t.string "age"
+    t.string "address"
+    t.string "password"
+    t.integer "telephone"
+    t.date "date"
+    t.time "time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "places", default: [], array: true
+    t.integer "duration"
+    t.integer "weight"
+    t.string "email"
+    t.string "month"
+    t.string "week"
+    t.string "search"
+    t.string "url"
+    t.string "color"
   end
 
   add_foreign_key "accounts", "employees"

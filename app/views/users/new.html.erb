@@ -1,0 +1,93 @@
+<div class="content">
+<h1>Add Details:</h1>
+<br>
+
+<%=form_for @user do |f|%>
+
+<h4>Select Country:</h4>
+
+<%= check_box("user", "country", {:multiple => true}, "India", nil)%>
+<%= f.label :india%>
+<br>
+<%= check_box("user", "country", {:multiple => true}, "Pakistan", nil)%>
+<%= f.label :Pakistan%>
+<br>
+<br>
+
+
+<h4>Eligibility:</h4>
+<%= f.radio_button :age, 'child' %>
+<%= f.label :I_am_younger_than_21%>
+<br>
+<%= f.radio_button :age, 'adult' %>
+<%= f.label :I_am_older_than_21%>
+<br>
+<br>
+
+<h4>Address:</h4>
+<%= f.text_area :address, size: "24x6"%>
+<br>
+<br>
+
+<h4>Password:</h4>
+<%= f.password_field :password %>
+<br>
+<br>
+
+<h4>Phone Number:</h4>
+<%=telephone_field(:user, :telephone) %>
+<br>
+<br>
+
+<h4>Date:</h4>
+<%= date_field(:user, :date) %>
+<br>
+<br>
+
+<h4>Preferred time:</h4>
+<%=time_field(:user, :time) %>
+<br>
+<br>
+
+<h4>Duration(in days):</h4>
+<%=range_field(:user, :duration, in: 1..1000)%>
+<br>
+<br>
+
+
+<h4>Enter Weight:</h4>
+<%= number_field(:user, :weight, in: 40.0..90.0, step: 0.5) %>
+<br>
+<br>
+
+<h4>Enter email:</h4>
+<%= email_field(:user, :email) %>
+<br>
+<br>
+
+<h4>Month & Week of joining:</h4>
+<%= month_field(:user, :month) %>
+<%= week_field(:user, :week) %>
+<br>
+<br>
+
+<%= search_field(:user, :search) %>
+<br>
+<br>
+
+<h4>Select Preferred Colour</h4>
+<%= color_field(:user, :color) %>
+<br>
+<br>
+
+<h4>Submit profile url:</h4>
+<%= url_field(:user, :url) %>
+<br>
+<br>
+
+<div>
+<%=f.submit "Save", id: "btn", class:"btn btn-outline-info"%>
+</div>
+
+<%end%>
+</div>
