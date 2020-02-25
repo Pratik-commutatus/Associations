@@ -22,11 +22,28 @@ class Calculator
 
     def self.median(n)
       array= n.split(' ').map(&:to_i)
-      sorted=array
+      sorted=array.sort
       len= sorted.length
-      (sorted[(len - 1) / 2] + sorted[len / 2]) / 2.0
+      if (len%2 == 0)
+      return (sorted[(len/2.0)]+sorted[((len-2)/2.0)])/2.0
+      else
+        0
+      end
+      sorted[len/2]
 
     end
+
+    def self.mode(o)
+      array= o.split(' ').map(&:to_i)
+      hash = Hash.new(0)
+  array.each do |i|
+    hash[i]+=1
+  end
+  hash.max_by{|k,v| k}
+end
+
+
+   
 
    
 

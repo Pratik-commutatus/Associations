@@ -20,6 +20,7 @@ class CalculatorsController < ApplicationController
    def mmm
     @mean= Calculator.mean(params[:m])
     @median= Calculator.median(params[:m])
+    @mode= Calculator.mode(params[:m])
     
     render :index
    end

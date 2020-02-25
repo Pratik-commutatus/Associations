@@ -1,3 +1,4 @@
+<h4>Add/Subtract</h4>
 <%= form_for :calculator, url: { action: :new }, method: :get do |f|   %>
   <%= number_field_tag :a, params[:a] %>
    <%= select_tag :operation, options_for_select([['+', :sum], ['-',    :subtr]], params[:operation]) %>
@@ -8,8 +9,10 @@
 <% unless @result.nil? %>
   <p> = <%= @result %> </p>
 <% end %>
+<br>
 
-
+<h4>Multiply</h4>
+<p>Format: Separate numbers with '*'</p>
 <%= form_for :calculator, url: { action: :test }, method: :get do |f|   %>
   <%= text_field_tag :c, params[:c] %>
   <%= f.submit 'Multiply' %>
@@ -18,10 +21,10 @@
 <% unless @resultt.nil? %>
   <p> = <%= @resultt %> </p>
 <% end %>
+<br>
 
 
-
-
+<h4>Subtract</h4>
 <%= form_for :calculator, url: { action: :subtract }, method: :get do |f|   %>
   <%= number_field_tag :j, params[:j] %>
   
@@ -32,9 +35,10 @@
 <% unless @subresult.nil? %>
   <p> = <%= @subresult %> </p>
 <% end %>
+<br>
 
 
-
+<h4>Mean, Median, Mode</h4>
 <%= form_for :calculator, url: { action: :mmm }, method: :get do |f|   %>
   <%= text_field_tag :m, params[:m] %>
   <%= f.submit 'Median' %>
@@ -48,3 +52,6 @@
   <p>Median = <%= @median %> </p>
 <% end %>
 
+<% unless @mode.nil? %>
+  <p>[Mode/Frequency] = <%= @mode %> </p>
+<% end %>
