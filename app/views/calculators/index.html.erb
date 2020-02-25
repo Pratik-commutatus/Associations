@@ -1,0 +1,50 @@
+<%= form_for :calculator, url: { action: :new }, method: :get do |f|   %>
+  <%= number_field_tag :a, params[:a] %>
+   <%= select_tag :operation, options_for_select([['+', :sum], ['-',    :subtr]], params[:operation]) %>
+  <%= number_field_tag :b, params[:b] %>
+  <%= f.submit 'Calculate!' %>
+<% end %>
+
+<% unless @result.nil? %>
+  <p> = <%= @result %> </p>
+<% end %>
+
+
+<%= form_for :calculator, url: { action: :test }, method: :get do |f|   %>
+  <%= text_field_tag :c, params[:c] %>
+  <%= f.submit 'Multiply' %>
+<% end %>
+
+<% unless @resultt.nil? %>
+  <p> = <%= @resultt %> </p>
+<% end %>
+
+
+
+
+<%= form_for :calculator, url: { action: :subtract }, method: :get do |f|   %>
+  <%= number_field_tag :j, params[:j] %>
+  
+  <%= number_field_tag :k, params[:k] %>
+  <%= f.submit 'Subtract!' %>
+<% end %>
+
+<% unless @subresult.nil? %>
+  <p> = <%= @subresult %> </p>
+<% end %>
+
+
+
+<%= form_for :calculator, url: { action: :mmm }, method: :get do |f|   %>
+  <%= text_field_tag :m, params[:m] %>
+  <%= f.submit 'Median' %>
+<% end %>
+
+<% unless @mean.nil? %>
+  <p>Mean = <%= @mean %> </p>
+<% end %>
+
+<% unless @median.nil? %>
+  <p>Median = <%= @median %> </p>
+<% end %>
+

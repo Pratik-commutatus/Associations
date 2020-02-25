@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :calcs
+  get '/calculators/test' => 'calculators#test', as: 'test'
+  get '/calculators/subtract' => 'calculators#subtract', as: 'subtract'
+
+  
+
+  get '/calculators/mode' => 'calculators#mmm', as: 'mmm'
+
+  resources :calculators
   resources :users
   resources :members
   resources :images
