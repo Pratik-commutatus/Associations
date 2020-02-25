@@ -1,0 +1,2 @@
+class MethodpracticeController < ApplicationController
+end

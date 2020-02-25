@@ -39,7 +39,7 @@ class Calculator
   array.each do |i|
     hash[i]+=1
   end
-  hash.max_by{|k,v| k}
+  hash.max_by{|k,v| v}
 end
 
 

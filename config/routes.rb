@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :calcs
+  get '/fileoperations/change' => 'fileoperations#change', as: 'change'
+  resources :fileoperations
+
   get '/calculators/test' => 'calculators#test', as: 'test'
   get '/calculators/subtract' => 'calculators#subtract', as: 'subtract'
 

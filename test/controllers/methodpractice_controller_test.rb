@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CalcsControllerTest < ActionDispatch::IntegrationTest
+class MethodpracticeControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

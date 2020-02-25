@@ -1,0 +1,2 @@
+module MethodpracticeHelper
+end

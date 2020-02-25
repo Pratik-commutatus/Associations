@@ -1,0 +1,10 @@
+
+<br>
+
+<h4>Add Changes:</h4>
+<%= form_for :fileoperation, url: { action: :change }, method: :get do |f|   %>
+  <%= text_area_tag :message, @result, class: 'form-control' %>
+  <br>
+  <%= f.submit 'Add',  class:"btn btn-outline-danger" %>
+  <%=link_to "Refresh", fileoperations_path, class:"btn btn-outline-info"%>
+<% end %>
