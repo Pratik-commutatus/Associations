@@ -1,0 +1,2 @@
+class Httprequest < ApplicationRecord
+end

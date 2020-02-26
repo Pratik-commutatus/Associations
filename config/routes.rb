@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :ajaxforms
+  resources :httprequests
   get '/fileoperations/change' => 'fileoperations#change', as: 'change'
   resources :fileoperations
 

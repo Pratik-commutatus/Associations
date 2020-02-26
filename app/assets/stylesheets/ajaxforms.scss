@@ -1,0 +1,38 @@
+// Place all the styles related to the ajaxforms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#form1{
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 1px solid rgb(150, 146, 146);
+    margin: auto ;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 500px;
+    
+}
+#form2{
+    border: 1px solid rgb(150, 146, 146);
+    margin: auto ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 500px;
+    
+}
+#form3{border-radius: 20px;
+    border: 1px solid rgb(150, 146, 146);
+    margin: auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 500px;
+    
+}

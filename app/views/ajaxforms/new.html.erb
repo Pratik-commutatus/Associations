@@ -1,0 +1,81 @@
+<%= form_for @detail, :html=> {:id => 'form1'} do |f| %>
+
+<div>
+<h3><%=f.label :name%></h3>
+<%=f.text_field :name, class:'form-control'%>
+</div>
+<br>
+<div>
+<h3><%=f.label :age%></h3>
+<%=f.text_field :age, class:'form-control'%>
+</div>
+<br>
+
+
+<div>
+<%=f.submit "JSON", id: "btn", class:"btn btn-info", id:"abtn"%>
+</div>
+
+<% end %>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+<%=form_for @detail, :html=> {:id => 'form2'} do |f|%>
+
+<div>
+<h3><%=f.label :name%></h3>
+<%=f.text_field :name, class:'form-control'%>
+</div>
+<br>
+<div>
+<h3><%=f.label :age%></h3>
+<%=f.text_field :age, class:'form-control'%>
+</div>
+<br>
+
+
+<div>
+<%=f.submit "XML", id: "btn", class:"btn btn-warning", id:"abtn"%>
+</div>
+
+<% end %>
+<br>
+<br>
+<br>
+
+
+
+
+
+<%=form_for @detail, :html=> {:id => 'form3'} do |f|%>
+
+<div>
+<h3><%=f.label :name%></h3>
+<%=f.text_field :name, class:'form-control'%>
+</div>
+<br>
+<div>
+<h3><%=f.label :age%></h3>
+<%=f.text_field :age, class:'form-control'%>
+</div>
+<br>
+
+
+<div>
+<%=f.submit "JS", id: "btn", class:"btn btn-danger", id:"abtn"%>
+</div>
+
+<% end %>
+<br>
+<br>
+<br>

@@ -1,0 +1,29 @@
+
+<%# <%=@people["results"].map{|v| v["name"]}%> 
+<br>
+<h3><u><%=link_to "API used", "https://swapi.co/api/people/" %></u></h3>
+<br>
+<br>
+
+<table class="table table-bordered">
+<thead>
+<th>Name</th>
+<th>Height</th>
+<th>Gender</th>
+<th>Hair colour</th>
+
+</thead>
+<% @results.each do |a|%>
+<tr>
+<td><%= a["name"] %></td>
+
+<td><%= a["height"]%></td>
+
+<td><%= a["gender"]%></td>
+
+<td><%= a["hair_color"]%></td>
+
+
+</tr>
+<% end%>
+</table>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_25_104415) do
+ActiveRecord::Schema.define(version: 2020_02_26_125625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 2020_02_25_104415) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "employee_id", null: false
     t.index ["employee_id"], name: "index_accounts_on_employee_id"
+  end
+
+  create_table "ajaxforms", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.integer "age"
   end
 
   create_table "appointments", force: :cascade do |t|
@@ -61,6 +68,11 @@ ActiveRecord::Schema.define(version: 2020_02_25_104415) do
   end
 
   create_table "fileoperations", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "httprequests", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,0 +1,2 @@
+class Ajaxform < ApplicationRecord
+end
